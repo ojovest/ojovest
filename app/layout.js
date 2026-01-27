@@ -1,12 +1,15 @@
+import "./globals.css";
+
 export const metadata = {
-  title: "Ojovest | Loan & Financial Marketplace",
-  description: "Compare loans and credit cards, check eligibility, and apply online with Ojovest.",
+  title: "OJOVEST | Ultra HNI Loans & Premium Credit Cards",
+  description:
+    "Premium loans and invite-only credit card offers for Ultra HNI clients. Discreet, fast, and white-glove support by OJOVEST.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, background: "#fff" }}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
