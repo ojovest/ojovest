@@ -1,15 +1,16 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "OJOVEST | Ultra HNI Loans & Premium Credit Cards",
-  description:
-    "Premium loans and invite-only credit card offers for Ultra HNI clients. Discreet, fast, and white-glove support by OJOVEST.",
+  title: "OJOVEST | Ultra HNI Loans & Credit Cards",
+  description: "Exclusive premium loans & credit card solutions for Ultra HNI clients in India & NRI",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
