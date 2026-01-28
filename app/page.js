@@ -78,3 +78,10 @@ export default function Home() {
 >
   WhatsApp Concierge
 </a>
+<footer style={{ marginTop: 48, opacity: 0.7 }}>
+  <p style={{ fontSize: 12, lineHeight: 1.6 }}>
+    OJOVEST is a facilitation and advisory platform. Loan approvals,
+    rates, limits, and final terms are subject to lender policies and
+    applicable regulatory guidelines. No guarantee of sanction is implied.
+  </p>
+</footer>
