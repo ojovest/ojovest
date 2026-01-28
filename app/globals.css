@@ -22,3 +22,33 @@ body {
   padding: 20px;
   margin-top: 20px;
 }
+/* HEADER */
+header {
+  max-width: 420px;
+  margin: 0 auto 32px auto;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* CTA Button */
+a.cta {
+  background: linear-gradient(135deg, #c9a24d, #f5d27a);
+  color: #000;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Card */
+.card {
+  background: #151515;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 24px;
+}
