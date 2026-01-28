@@ -1,68 +1,73 @@
 export default function Home() {
   const whatsappHeaderLink =
-    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20premium%20financing%20%28Loans%2FCredit%20Cards%29.";
+    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20premium%20financing%20solutions.";
   const whatsappMainLink =
     "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20Premium%20Loans%20%26%20Elite%20Credit%20Card%20Offers.";
-  const emailLink = "mailto:director@ojovest.com?subject=Premium%20Loans%20%26%20Elite%20Credit%20Cards%20-%20Inquiry";
+  const emailLink =
+    "mailto:director@ojovest.com?subject=Premium%20Loans%20%26%20Elite%20Credit%20Cards%20Inquiry";
 
   return (
     <main className="container">
-      {/* Header */}
+      {/* ================= HEADER ================= */}
       <header className="header">
-        <div className="headerLeft">
-          <img src="/logo.png" alt="OJOVEST Wealth Management" className="logo" />
-          <div className="subtitle">Ultra HNI · India & NRI</div>
+        <img
+          src="/logo.png"
+          alt="OJOVEST Wealth Management"
+          className="logo"
+        />
 
-          <div className="topLinks">
-            <a className="topLink" href={emailLink}>
-              Email Director
-            </a>
-            <span className="dot">•</span>
-            <a className="topLink" href={whatsappHeaderLink} target="_blank" rel="noreferrer">
-              WhatsApp Now
-            </a>
-          </div>
-        </div>
+        <div className="subtitle">Ultra HNI · India & NRI</div>
 
-        <a className="header-cta" href={whatsappHeaderLink} target="_blank" rel="noreferrer">
+        <a
+          href={whatsappHeaderLink}
+          target="_blank"
+          rel="noreferrer"
+          className="header-cta"
+        >
           WhatsApp Concierge →
         </a>
       </header>
 
-      {/* Hero */}
+      {/* ================= HERO ================= */}
       <h1 className="heroTitle">
         Premium Loans & <br />
         Elite Credit Card Offers
       </h1>
 
       <p className="heroDesc">
-        Discreet, relationship-led financing for Ultra HNI clients — faster approvals, premium terms,
-        and white-glove assistance.
+        Discreet, relationship-led financing for Ultra HNI clients — faster
+        approvals, premium terms, and white-glove assistance.
       </p>
 
-      {/* CTA */}
+      {/* ================= CTA ================= */}
       <div className="ctaRow">
-        <a className="cta" href={whatsappMainLink} target="_blank" rel="noreferrer">
+        <a
+          href={whatsappMainLink}
+          target="_blank"
+          rel="noreferrer"
+          className="cta"
+        >
           Apply via WhatsApp →
         </a>
-        <a className="ctaSecondary" href={emailLink}>
+
+        <a href={emailLink} className="ctaSecondary">
           Request a Call (Email)
         </a>
       </div>
 
-      {/* Trust points */}
+      {/* ================= TRUST POINTS ================= */}
       <ul className="trustList">
         <li>Confidential & secure</li>
         <li>Multi-lender comparison</li>
         <li>Dedicated handling</li>
       </ul>
 
-      {/* Card */}
+      {/* ================= CARD ================= */}
       <div className="card">
         <h3>Fast Track Concierge</h3>
         <p>
-          Share your requirements — we’ll suggest the best matched lenders/cards and guide
-          documentation.
+          Share your requirements — we’ll suggest the best matched
+          lenders/cards and guide documentation.
         </p>
 
         <div className="cardGrid">
@@ -78,7 +83,7 @@ export default function Home() {
 
           <div className="cardItem">
             <div className="cardLabel">Region</div>
-            <div className="cardValue">India & India+</div>
+            <div className="cardValue">India & NRI</div>
           </div>
 
           <div className="cardItem">
@@ -88,16 +93,23 @@ export default function Home() {
         </div>
 
         <div className="cardActions">
-          <a className="cta" href={whatsappMainLink} target="_blank" rel="noreferrer">
+          <a
+            href={whatsappMainLink}
+            target="_blank"
+            rel="noreferrer"
+            className="cta"
+          >
             WhatsApp Now →
           </a>
-          <a className="ctaSecondary" href={emailLink}>
+
+          <a href={emailLink} className="ctaSecondary">
             Email Director
           </a>
         </div>
 
         <p className="finePrint">
-          *Turnaround time is indicative and depends on profile, documentation and lender policies.
+          *Turnaround time is indicative and depends on profile, documentation
+          and lender policies.
         </p>
       </div>
     </main>
