@@ -1,62 +1,83 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
+/* Base */
 body {
   background: #000;
   color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
 }
 
-/* Main container */
+/* Container */
 .container {
-  max-width: 1100px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 32px 24px 80px;
+  padding: 28px 22px 60px;
 }
 
-/* ===== HEADER ===== */
+/* =========================
+   Premium Header
+========================= */
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  gap: 12px;
+  padding: 18px 0 18px;
+  border-bottom: 1px solid rgba(201, 162, 77, 0.28);
   text-align: center;
 }
 
-@media (min-width: 900px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
 .logo {
   height: 44px;
   width: auto;
+  display: block;
+  max-width: 200px;
+  border-radius: 8px;
 }
 
 .subtitle {
-  font-size: 13px;
-  letter-spacing: 1.2px;
+  font-size: 12px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
   color: #c9a24d;
 }
 
-/* Header CTA */
+.topLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+.topLink {
+  color: #c9a24d;
+  text-decoration: none;
+}
+
+.topLink:hover {
+  text-decoration: underline;
+}
+
+.dot {
+  color: rgba(201, 162, 77, 0.7);
+}
+
+/* Header CTA button */
 .header-cta {
+  margin-top: 6px;
+  font-size: 14px;
   padding: 10px 18px;
   border-radius: 999px;
   border: 1px solid #c9a24d;
   color: #c9a24d;
   text-decoration: none;
-  font-size: 14px;
   transition: all 0.25s ease;
 }
 
@@ -65,92 +86,194 @@ body {
   color: #000;
 }
 
-/* ===== HERO ===== */
+/* Desktop header layout */
+@media (min-width: 900px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .headerLeft {
+    align-items: flex-start;
+  }
+
+  .header-cta {
+    margin-top: 0;
+  }
+}
+
+/* =========================
+   Hero
+========================= */
 .heroTitle {
-  font-size: 40px;
-  line-height: 1.2;
-  margin-top: 40px;
+  margin-top: 34px;
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .heroDesc {
-  margin-top: 16px;
-  color: #ccc;
-  max-width: 640px;
+  margin-top: 14px;
+  max-width: 680px;
+  color: #cfcfcf;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
 /* CTA row */
 .ctaRow {
   display: flex;
-  gap: 14px;
-  margin-top: 24px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-top: 18px;
 }
 
 a.cta {
   background: linear-gradient(135deg, #c9a24d, #f5d27a);
   color: #000;
-  padding: 14px 20px;
+  padding: 12px 18px;
   border-radius: 14px;
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
+  display: inline-block;
+}
+
+a.cta:hover {
+  filter: brightness(1.05);
 }
 
 a.ctaSecondary {
-  border: 1px solid #666;
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: #fff;
-  padding: 14px 20px;
+  padding: 12px 18px;
   border-radius: 14px;
   text-decoration: none;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+a.ctaSecondary:hover {
+  border-color: rgba(201, 162, 77, 0.7);
 }
 
 /* Trust points */
 .trustList {
-  margin-top: 20px;
+  margin-top: 18px;
   padding-left: 18px;
-  color: #ddd;
+  color: #eaeaea;
+  line-height: 1.7;
 }
 
-/* ===== CARD ===== */
+/* =========================
+   Card
+========================= */
 .card {
-  background: #151515;
+  margin-top: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  padding: 24px;
-  margin-top: 32px;
+  padding: 22px;
 }
 
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card p {
+  margin-top: 10px;
+  color: #d6d6d6;
+  line-height: 1.6;
+}
+
+/* Card grid */
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 12px;
   margin-top: 16px;
 }
 
+@media (min-width: 700px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 980px) {
+  .cardGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .cardItem {
-  background: #0f0f0f;
-  padding: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
+  padding: 14px;
 }
 
 .cardLabel {
-  font-size: 12px;
-  color: #999;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .cardValue {
-  margin-top: 4px;
-  font-weight: 600;
+  margin-top: 6px;
+  font-weight: 800;
+  font-size: 14px;
 }
 
 /* Card actions */
 .cardActions {
   display: flex;
-  gap: 14px;
-  margin-top: 20px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-top: 16px;
 }
 
 .finePrint {
-  margin-top: 16px;
+  margin-top: 12px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  margin-top: 22px;
   font-size: 12px;
-  color: #888;
+  color: #aaa;
+}
+
+.footerSep {
+  margin: 0 6px;
+  color: rgba(201, 162, 77, 0.6);
+}
+
+.footer a {
+  color: #c9a24d;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footerNote {
+  margin-top: 10px;
+  color: #8f8f8f;
+  line-height: 1.6;
+  max-width: 820px;
+}
+
+.footerNote2 {
+  margin-top: 8px;
+  color: #7d7d7d;
 }
