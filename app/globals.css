@@ -300,3 +300,38 @@ body {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.45);
 }
+/* ===== Privacy Page ===== */
+.privacy {
+  padding: 28px 0;
+  max-width: 760px;
+}
+
+.privacyTitle {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.privacyHeading {
+  margin-top: 22px;
+  font-size: 18px;
+}
+
+.privacyText {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.privacyList {
+  margin-top: 10px;
+  padding-left: 18px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.privacyFooter {
+  margin-top: 30px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
