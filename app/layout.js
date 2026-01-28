@@ -1,9 +1,12 @@
 export const metadata = {
-  title: "OJOVEST | Ultra HNI Loans & Credit Cards",
+  title: "OJOVEST | Ultra HNI Loans & Elite Credit Cards",
   description:
     "Discreet, relationship-led financing for Ultra HNI clients in India & NRI.",
+  alternates: {
+    canonical: "https://www.ojovest.com",
+  },
   openGraph: {
-    title: "OJOVEST | Ultra HNI Loans & Credit Cards",
+    title: "OJOVEST | Ultra HNI Loans & Elite Credit Cards",
     description:
       "Discreet, relationship-led financing for Ultra HNI clients in India & NRI.",
     url: "https://www.ojovest.com",
@@ -24,9 +27,9 @@ export const metadata = {
     follow: true,
   },
 
-  // ✅ GOOGLE VERIFICATION (THIS IS THE KEY)
+  // ✅ GOOGLE VERIFICATION — THIS IS ENOUGH
   verification: {
-    google: "MshjPsG4x3vwyHM68IlWpxRn8DBZqiSVGAQnDToAiww",
+    google: "MshjPsG4x3vwyHM68IlWpxRn8DBZqiSVGAQnDTa0ivw",
   },
 };
 
