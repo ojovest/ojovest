@@ -2,31 +2,26 @@ export default function Home() {
   return (
     <main className="container">
       
-      {/* Header */}
-<header
-  style={{
-    marginBottom: "32px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: "16px",
-  }}
->
-  <div>
-    <img
-      src="/logo.png"
-      alt="OJOVEST Wealth Management"
-      style={{ height: "44px", marginBottom: "10px" }}
-    />
-    <div className="subtitle">Ultra HNI · India & NRI</div>
+{/* Header */}
+<header className="header">
+  <img
+    src="/logo.png"
+    alt="OJOVEST Wealth Management"
+    className="logo"
+  />
+
+  <div className="subtitle">
+    Ultra HNI · India & NRI
   </div>
 
   <a
-    href="https://wa.me/918651035362?text=Hi%20OJOVEST..."
+    href="https://wa.me/918651035362?text=Hi%20OJOVEST%20—%20I%20am%20interested%20in%20premium%20financing"
+    className="header-cta"
   >
     WhatsApp Concierge →
   </a>
 </header>
+
 
 
       {/* Hero */}
