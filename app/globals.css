@@ -240,3 +240,25 @@ body {
   font-size: 11px;
   color: #888;
 }
+/* Floating WhatsApp Button */
+.floatingWhatsapp {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+
+  padding: 14px 18px;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #c9a24d, #f5d27a);
+  color: #000;
+  font-weight: 800;
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.floatingWhatsapp:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
