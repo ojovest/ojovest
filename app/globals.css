@@ -1,264 +1,207 @@
-/* =====================
-   Global Reset
-===================== */
-* {
-  box-sizing: border-box;
-}
-
+/* ===== Base ===== */
 body {
-  margin: 0;
   background: #000;
   color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
 }
 
-/* =====================
-   Layout Container
-===================== */
 .container {
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px 40px;
+  padding: 0 22px 40px;
 }
 
-/* =====================
-   Sticky Premium Header
-===================== */
+/* ===== Header ===== */
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-
-  padding: 18px 20px;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px);
-
+  padding: 26px 0;
   border-bottom: 1px solid rgba(212, 175, 55, 0.25);
   text-align: center;
 }
 
-/* Desktop header layout */
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo {
+  height: 44px;
+  max-width: 220px;
+}
+
+.subtitle {
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #c9a24d;
+}
+
+.header-cta {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #c9a24d;
+  color: #c9a24d;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Desktop header */
 @media (min-width: 900px) {
   .header {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
-}
 
-/* =====================
-   Header Left
-===================== */
-.headerLeft {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media (min-width: 900px) {
   .headerLeft {
     align-items: flex-start;
   }
 }
 
-/* =====================
-   Logo
-===================== */
-.logo {
-  height: 44px;
-  width: auto;
-  max-width: 220px;
-  display: block;
-}
-
-/* =====================
-   Subtitle
-===================== */
-.subtitle {
-  margin-top: 4px;
-  font-size: 12px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: #c9a24d;
-}
-
-/* =====================
-   Header CTA Button
-===================== */
-.header-cta {
-  margin-top: 10px;
-  padding: 10px 18px;
-  font-size: 14px;
-  font-weight: 600;
-
-  border-radius: 999px;
-  border: 1px solid #c9a24d;
-  color: #c9a24d;
-  text-decoration: none;
-
-  transition: all 0.25s ease;
-}
-
-.header-cta:hover {
-  background: #c9a24d;
-  color: #000;
-}
-
-@media (min-width: 900px) {
-  .header-cta {
-    margin-top: 0;
-  }
-}
-
-/* =====================
-   Hero Section
-===================== */
+/* ===== Hero ===== */
 .heroTitle {
   margin-top: 36px;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 40px;
   line-height: 1.2;
 }
 
-@media (min-width: 900px) {
-  .heroTitle {
-    font-size: 40px;
-  }
-}
-
 .heroDesc {
-  margin-top: 16px;
-  font-size: 15px;
+  margin-top: 14px;
   color: #ccc;
-  line-height: 1.6;
+  max-width: 600px;
 }
 
-/* =====================
-   CTA Row
-===================== */
+/* ===== CTAs ===== */
 .ctaRow {
-  margin-top: 24px;
   display: flex;
+  gap: 14px;
+  margin-top: 26px;
   flex-wrap: wrap;
-  gap: 12px;
 }
 
-/* Primary CTA */
 .cta {
   background: linear-gradient(135deg, #c9a24d, #f5d27a);
   color: #000;
-  padding: 14px 20px;
+  padding: 14px 18px;
   border-radius: 14px;
   font-weight: 700;
   text-decoration: none;
 }
 
-/* Secondary CTA */
 .ctaSecondary {
-  padding: 14px 20px;
+  padding: 14px 18px;
   border-radius: 14px;
-  border: 1px solid #666;
+  border: 1px solid #444;
   color: #fff;
   text-decoration: none;
 }
 
-/* =====================
-   Trust List
-===================== */
+/* ===== Trust ===== */
 .trustList {
-  margin-top: 20px;
+  margin-top: 22px;
   padding-left: 18px;
-  font-size: 14px;
-  color: #eee;
 }
 
 .trustList li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
-/* =====================
-   Card
-===================== */
+/* ===== Card ===== */
 .card {
-  margin-top: 28px;
+  margin-top: 32px;
   background: #151515;
-  border-radius: 16px;
-  padding: 22px;
+  border-radius: 18px;
+  padding: 24px;
 }
 
-.card h3 {
-  margin-top: 0;
-}
-
-/* =====================
-   Card Grid
-===================== */
 .cardGrid {
-  margin-top: 16px;
+  margin-top: 18px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
 }
 
 .cardItem {
   background: #0f0f0f;
+  padding: 14px;
   border-radius: 12px;
-  padding: 12px;
 }
 
 .cardLabel {
   font-size: 12px;
-  color: #aaa;
+  color: #999;
 }
 
 .cardValue {
-  font-weight: 700;
   margin-top: 4px;
+  font-weight: 700;
 }
 
-/* =====================
-   Card Actions
-===================== */
 .cardActions {
-  margin-top: 20px;
+  margin-top: 18px;
   display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.finePrint {
+  margin-top: 14px;
+  font-size: 11px;
+  color: #aaa;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 40px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footerRow {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-/* =====================
-   Fine Print
-===================== */
-.finePrint {
-  margin-top: 12px;
-  font-size: 11px;
-  color: #888;
-}
-/* Floating WhatsApp Button */
-.floatingWhatsapp {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 9999;
-
-  padding: 14px 18px;
-  border-radius: 999px;
-
-  background: linear-gradient(135deg, #c9a24d, #f5d27a);
-  color: #000;
+.footerBrand {
   font-weight: 800;
-  text-decoration: none;
-
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  letter-spacing: 1px;
 }
 
-.floatingWhatsapp:hover {
-  opacity: 0.95;
-  transform: translateY(-1px);
+.footerLinks {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footerLink {
+  color: #c9a24d;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footerDot {
+  color: #555;
+}
+
+.footerDisclaimer {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+.footerCopyright {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #777;
 }
