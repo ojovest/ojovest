@@ -1,14 +1,14 @@
 export default function Home() {
   const whatsappHeaderLink =
-    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20premium%20financing";
+    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20premium%20financing%20%28Loans%2FCredit%20Cards%29.";
   const whatsappMainLink =
-    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20Premium%20Loans%20%26%20Elite%20Credit%20Card%20Offers";
+    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20Premium%20Loans%20%26%20Elite%20Credit%20Card%20Offers.";
   const emailLink =
-    "mailto:director@ojovest.com?subject=Premium%20Loans%20%26%20Elite%20Credit%20Cards%20Inquiry";
+    "mailto:director@ojovest.com?subject=Premium%20Loans%20%26%20Elite%20Credit%20Cards%20-%20Inquiry";
 
   return (
     <main className="container">
-      {/* ===== Header ===== */}
+      {/* Header */}
       <header className="header">
         <div className="headerLeft">
           <img
@@ -17,6 +17,21 @@ export default function Home() {
             className="logo"
           />
           <div className="subtitle">Ultra HNI · India & NRI</div>
+
+          <div className="topLinks">
+            <a className="topLink" href={emailLink}>
+              Email Director
+            </a>
+            <span className="dot">•</span>
+            <a
+              className="topLink"
+              href={whatsappMainLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp Now
+            </a>
+          </div>
         </div>
 
         <a
@@ -29,7 +44,7 @@ export default function Home() {
         </a>
       </header>
 
-      {/* ===== Hero ===== */}
+      {/* Hero */}
       <h1 className="heroTitle">
         Premium Loans & <br />
         Elite Credit Card Offers
@@ -40,7 +55,7 @@ export default function Home() {
         approvals, premium terms, and white-glove assistance.
       </p>
 
-      {/* ===== CTA Row ===== */}
+      {/* CTA Row */}
       <div className="ctaRow">
         <a
           className="cta"
@@ -56,19 +71,19 @@ export default function Home() {
         </a>
       </div>
 
-      {/* ===== Trust Points ===== */}
+      {/* Trust points */}
       <ul className="trustList">
         <li>Confidential & secure</li>
         <li>Multi-lender comparison</li>
         <li>Dedicated handling</li>
       </ul>
 
-      {/* ===== Concierge Card ===== */}
+      {/* Card */}
       <div className="card">
         <h3>Fast Track Concierge</h3>
         <p>
-          Share your requirements — we’ll suggest the best matched
-          lenders/cards and guide documentation.
+          Share your requirements — we’ll suggest the best matched lenders/cards
+          and guide documentation.
         </p>
 
         <div className="cardGrid">
@@ -109,47 +124,31 @@ export default function Home() {
         </div>
 
         <p className="finePrint">
-          *Turnaround time is indicative and depends on profile,
-          documentation, and lender policies.
+          *Turnaround time is indicative and depends on profile, documentation
+          and lender policies.
         </p>
       </div>
 
-      {/* ===== Footer ===== */}
-      <footer className="footer">
-        <div className="footerRow">
-          <div className="footerBrand">OJOVEST</div>
+      {/* Footer */}
+      <div className="footer">
+        <a href="/">OJOVEST</a> <span className="footerSep">·</span>
+        <a href={emailLink}>Email</a> <span className="footerSep">·</span>
+        <a href={whatsappMainLink} target="_blank" rel="noreferrer">
+          WhatsApp
+        </a>{" "}
+        <span className="footerSep">·</span>
+        <a href="/privacy">Privacy</a>
 
-          <div className="footerLinks">
-            <a href={emailLink} className="footerLink">
-              Email
-            </a>
-            <span className="footerDot">•</span>
-            <a
-              href={whatsappHeaderLink}
-              target="_blank"
-              rel="noreferrer"
-              className="footerLink"
-            >
-              WhatsApp
-            </a>
-            <span className="footerDot">•</span>
-            <a href="#privacy" className="footerLink">
-              Privacy
-            </a>
-          </div>
-        </div>
-
-        <p className="footerDisclaimer" id="privacy">
+        <p className="footerNote">
           Disclaimer: OJOVEST provides concierge support for loan and credit card
           introductions. Final approval, pricing, eligibility, and documentation
           requirements are determined solely by partner banks/NBFCs.
         </p>
 
-        <p className="footerCopyright">
-          © {new Date().getFullYear()} OJOVEST Wealth Management. All rights
-          reserved.
+        <p className="footerNote2">
+          © 2026 OJOVEST Wealth Management. All rights reserved.
         </p>
-      </footer>
+      </div>
     </main>
   );
 }
