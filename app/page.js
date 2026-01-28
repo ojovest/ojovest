@@ -1,16 +1,14 @@
 export default function Home() {
   const whatsappHeaderLink =
     "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20premium%20financing";
-
   const whatsappMainLink =
     "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20Premium%20Loans%20%26%20Elite%20Credit%20Card%20Offers";
-
   const emailLink =
     "mailto:director@ojovest.com?subject=Premium%20Loans%20%26%20Elite%20Credit%20Cards%20Inquiry";
 
   return (
     <main className="container">
-      {/* ================= HEADER ================= */}
+      {/* ===== Header ===== */}
       <header className="header">
         <div className="headerLeft">
           <img
@@ -22,16 +20,16 @@ export default function Home() {
         </div>
 
         <a
+          className="header-cta"
           href={whatsappHeaderLink}
           target="_blank"
           rel="noreferrer"
-          className="header-cta"
         >
           WhatsApp Concierge →
         </a>
       </header>
 
-      {/* ================= HERO ================= */}
+      {/* ===== Hero ===== */}
       <h1 className="heroTitle">
         Premium Loans & <br />
         Elite Credit Card Offers
@@ -42,33 +40,32 @@ export default function Home() {
         approvals, premium terms, and white-glove assistance.
       </p>
 
-      {/* ================= CTA ================= */}
+      {/* ===== CTA Row ===== */}
       <div className="ctaRow">
         <a
+          className="cta"
           href={whatsappMainLink}
           target="_blank"
           rel="noreferrer"
-          className="cta"
         >
           Apply via WhatsApp →
         </a>
 
-        <a href={emailLink} className="ctaSecondary">
+        <a className="ctaSecondary" href={emailLink}>
           Request a Call (Email)
         </a>
       </div>
 
-      {/* ================= TRUST POINTS ================= */}
+      {/* ===== Trust Points ===== */}
       <ul className="trustList">
         <li>Confidential & secure</li>
         <li>Multi-lender comparison</li>
         <li>Dedicated handling</li>
       </ul>
 
-      {/* ================= INFO CARD ================= */}
+      {/* ===== Concierge Card ===== */}
       <div className="card">
         <h3>Fast Track Concierge</h3>
-
         <p>
           Share your requirements — we’ll suggest the best matched
           lenders/cards and guide documentation.
@@ -98,15 +95,15 @@ export default function Home() {
 
         <div className="cardActions">
           <a
+            className="cta"
             href={whatsappMainLink}
             target="_blank"
             rel="noreferrer"
-            className="cta"
           >
             WhatsApp Now →
           </a>
 
-          <a href={emailLink} className="ctaSecondary">
+          <a className="ctaSecondary" href={emailLink}>
             Email Director
           </a>
         </div>
@@ -117,16 +114,42 @@ export default function Home() {
         </p>
       </div>
 
-      {/* ================= FLOATING WHATSAPP BUTTON ================= */}
-      <a
-        href={whatsappMainLink}
-        target="_blank"
-        rel="noreferrer"
-        className="floatingWhatsapp"
-        aria-label="WhatsApp Concierge"
-      >
- WhatsApp Concierge
-      </a>
+      {/* ===== Footer ===== */}
+      <footer className="footer">
+        <div className="footerRow">
+          <div className="footerBrand">OJOVEST</div>
+
+          <div className="footerLinks">
+            <a href={emailLink} className="footerLink">
+              Email
+            </a>
+            <span className="footerDot">•</span>
+            <a
+              href={whatsappHeaderLink}
+              target="_blank"
+              rel="noreferrer"
+              className="footerLink"
+            >
+              WhatsApp
+            </a>
+            <span className="footerDot">•</span>
+            <a href="#privacy" className="footerLink">
+              Privacy
+            </a>
+          </div>
+        </div>
+
+        <p className="footerDisclaimer" id="privacy">
+          Disclaimer: OJOVEST provides concierge support for loan and credit card
+          introductions. Final approval, pricing, eligibility, and documentation
+          requirements are determined solely by partner banks/NBFCs.
+        </p>
+
+        <p className="footerCopyright">
+          © {new Date().getFullYear()} OJOVEST Wealth Management. All rights
+          reserved.
+        </p>
+      </footer>
     </main>
   );
 }
