@@ -34,7 +34,11 @@ body {
 }
 
 .logo {
-  height: 48px;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
 }
 
 .subtitle {
