@@ -125,7 +125,7 @@ export default function Home() {
         className="floatingWhatsapp"
         aria-label="WhatsApp Concierge"
       >
-        WhatsApp
+ WhatsApp Concierge
       </a>
     </main>
   );
