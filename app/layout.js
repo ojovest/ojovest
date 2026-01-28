@@ -1,19 +1,9 @@
 export const metadata = {
-  title: "OJOVEST | Ultra HNI Loans & Elite Credit Cards",
+  title: "OJOVEST | Ultra HNI Loans & Credit Cards",
   description:
-    "OJOVEST provides discreet, relationship-led premium loans and elite credit card solutions for Ultra HNI clients in India & NRI. White-glove financial concierge.",
-  keywords: [
-    "Ultra HNI loans",
-    "Premium loans India",
-    "Elite credit cards",
-    "High value loans",
-    "Wealth management India",
-    "NRI loans India",
-    "Luxury banking concierge"
-  ],
-  authors: [{ name: "OJOVEST Wealth Management" }],
+    "Discreet, relationship-led financing for Ultra HNI clients in India & NRI.",
   openGraph: {
-    title: "OJOVEST | Premium Loans & Elite Credit Card Offers",
+    title: "OJOVEST | Ultra HNI Loans & Credit Cards",
     description:
       "Discreet, relationship-led financing for Ultra HNI clients in India & NRI.",
     url: "https://www.ojovest.com",
@@ -32,6 +22,11 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+
+  // ✅ GOOGLE VERIFICATION (THIS IS THE KEY)
+  verification: {
+    google: "MshjPsG4x3vwyHM68IlWpxRn8DBZqiSVGAQnDToAiww",
   },
 };
 
