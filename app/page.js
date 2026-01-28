@@ -1,8 +1,10 @@
 export default function Home() {
   const whatsappHeaderLink =
-    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20premium%20financing%20solutions.";
+    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20premium%20financing";
+
   const whatsappMainLink =
-    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20Premium%20Loans%20%26%20Elite%20Credit%20Card%20Offers.";
+    "https://wa.me/918651035362?text=Hi%20OJOVEST%2C%20I%20am%20interested%20in%20Premium%20Loans%20%26%20Elite%20Credit%20Card%20Offers";
+
   const emailLink =
     "mailto:director@ojovest.com?subject=Premium%20Loans%20%26%20Elite%20Credit%20Cards%20Inquiry";
 
@@ -10,13 +12,14 @@ export default function Home() {
     <main className="container">
       {/* ================= HEADER ================= */}
       <header className="header">
-        <img
-          src="/logo.png"
-          alt="OJOVEST Wealth Management"
-          className="logo"
-        />
-
-        <div className="subtitle">Ultra HNI · India & NRI</div>
+        <div className="headerLeft">
+          <img
+            src="/logo.png"
+            alt="OJOVEST Wealth Management"
+            className="logo"
+          />
+          <div className="subtitle">Ultra HNI · India & NRI</div>
+        </div>
 
         <a
           href={whatsappHeaderLink}
@@ -62,9 +65,10 @@ export default function Home() {
         <li>Dedicated handling</li>
       </ul>
 
-      {/* ================= CARD ================= */}
+      {/* ================= INFO CARD ================= */}
       <div className="card">
         <h3>Fast Track Concierge</h3>
+
         <p>
           Share your requirements — we’ll suggest the best matched
           lenders/cards and guide documentation.
@@ -108,10 +112,21 @@ export default function Home() {
         </div>
 
         <p className="finePrint">
-          *Turnaround time is indicative and depends on profile, documentation
-          and lender policies.
+          *Turnaround time is indicative and depends on profile,
+          documentation, and lender policies.
         </p>
       </div>
+
+      {/* ================= FLOATING WHATSAPP BUTTON ================= */}
+      <a
+        href={whatsappMainLink}
+        target="_blank"
+        rel="noreferrer"
+        className="floatingWhatsapp"
+        aria-label="WhatsApp Concierge"
+      >
+        WhatsApp
+      </a>
     </main>
   );
 }
