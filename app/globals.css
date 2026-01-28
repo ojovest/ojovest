@@ -36,11 +36,11 @@ body {
   text-align: center;
 }
 
-
 .logo {
-  max-width: 220px;
-  height: auto;
-  object-fit: contain;
+  height: 44px;
+  width: auto;
+  display: block;
+  max-width: 200px;
 }
 
 }
