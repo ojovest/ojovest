@@ -2,9 +2,9 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "OJOVEST | Ultra HNI Loans & Credit Card Offers",
+  title: "OJOVEST | Ultra HNI Wealth Management",
   description:
-    "Discreet, relationship-led financing for Ultra HNI clients — faster approvals, premium terms, and white-glove assistance.",
+    "Premium loans and elite credit card offers for Ultra HNI clients in India & NRI.",
   verification: {
     google: "MshjPsG4x3vwyHM68IlWpxRn8DBZqiSVGAQnDTa0ivw",
   },
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* ✅ GA4 */}
+        {/* GA4 Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-KZQFTXMEDC"
           strategy="afterInteractive"
@@ -23,9 +23,10 @@ export default function RootLayout({ children }) {
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
             gtag('js', new Date());
-            gtag('config', 'G-KZQFTXMEDC', { anonymize_ip: true });
+            gtag('config', 'G-KZQFTXMEDC', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
       </head>
