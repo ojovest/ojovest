@@ -1,19 +1,14 @@
 import "./globals.css";
 import Script from "next/script";
+import Analytics from "./components/Analytics";
+import { GA_MEASUREMENT_ID } from "./lib/gtag";
 
 export const metadata = {
-  title: "OJOVEST | Ultra HNI Wealth Management",
+  title: "OJOVEST | Wealth Management",
   description:
-    "Premium Loans & Elite Credit Card Offers — relationship-led financing for Ultra HNI clients (India & NRI).",
-
-  // Google Search Console verification (your token)
+    "Discreet, relationship-led financing for Ultra HNI clients in India & NRI.",
   verification: {
     google: "MshjPsG4x3vwyHM68IlWpxRn8DBZqiSVGAQnDTa0ivw",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
@@ -21,26 +16,31 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* GA4: load gtag */}
+        {/* GA4 base script */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-KZQFTXMEDC"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
-
-        {/* GA4: init */}
         <Script id="ga4-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
+
             gtag('js', new Date());
-            gtag('config', 'G-KZQFTXMEDC', {
+
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              send_page_view: false,
               anonymize_ip: true
             });
           `}
         </Script>
       </head>
-      <body>{children}</body>
+
+      <body>
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }
