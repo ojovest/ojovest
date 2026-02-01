@@ -1,22 +1,37 @@
-export const GA_ID = "G-KZQFTXMEDC";
+// app/lib/gtag.js
 
-export function gaEvent({ action, category, label, value }) {
+export const GA_MEASUREMENT_ID = "G-KZQFTXMEDC";
+
+// Pageview
+export const pageview = (url) => {
   if (typeof window === "undefined") return;
+  if (!window.gtag) return;
 
-  if (typeof window.gtag === "function") {
-    window.gtag("event", action, {
-      event_category: category,
-      event_label: label,
-      value,
-    });
-  } else {
-    // fallback (still safe)
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: action,
-      event_category: category,
-      event_label: label,
-      value,
-    });
-  }
-}
+  const isDebug =
+    window.location.search.includes("debug=1") ||
+    window.location.hostname.includes("localhost");
+
+  window.gtag("event", "page_view", {
+    page_location: url,
+    page_path: window.location.pathname,
+    page_title: document.title,
+    debug_mode: isDebug,
+  });
+};
+
+// Event
+export const event = ({ action, category, label, value }) => {
+  if (typeof window === "undefined") return;
+  if (!window.gtag) return;
+
+  const isDebug =
+    window.location.search.includes("debug=1") ||
+    window.location.hostname.includes("localhost");
+
+  window.gtag("event", action, {
+    event_category: category,
+    event_label: label,
+    value: value,
+    debug_mode: isDebug,
+  });
+};
