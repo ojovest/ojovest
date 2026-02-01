@@ -1,96 +1,81 @@
-:root {
-  --bg: #000;
-  --text: #fff;
-  --muted: #b7b7b7;
-  --gold: #c9a24d;
-  --card: #151515;
-  --border: rgba(201, 162, 77, 0.28);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
 body {
-  padding: 0;
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
+  background: #000;
+  color: #fff;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Layout */
 .container {
   max-width: 980px;
   margin: 0 auto;
-  padding: 28px 22px 40px;
+  padding: 0 20px 40px;
 }
 
 /* Header */
 .header {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 12px 0 18px;
-  border-bottom: 1px solid var(--border);
+  align-items: center;
+  gap: 10px;
+  padding: 28px 0 20px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  text-align: center;
 }
 
 .headerLeft {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 6px;
 }
 
 .logo {
   height: 44px;
   width: auto;
   display: block;
+  max-width: 240px;
 }
 
 .subtitle {
   font-size: 12px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #c9a24d;
 }
 
 .topLinks {
+  margin-top: 4px;
   display: flex;
   gap: 10px;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .topLink {
   font-size: 12px;
-  color: var(--muted);
+  color: #d7caa1;
+  text-decoration: none;
+}
+.topLink:hover {
   text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .dot {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.35);
 }
 
-/* Header CTA */
 .header-cta {
-  align-self: flex-start;
-  font-size: 13px;
-  padding: 10px 16px;
+  margin-top: 8px;
+  font-size: 14px;
+  padding: 10px 18px;
   border-radius: 999px;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  transition: 0.2s ease;
+  border: 1px solid #c9a24d;
+  color: #c9a24d;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
-
 .header-cta:hover {
-  background: var(--gold);
+  background: #c9a24d;
   color: #000;
 }
 
@@ -100,178 +85,173 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
+  }
+  .headerLeft {
+    align-items: flex-start;
+  }
+  .topLinks {
+    justify-content: flex-start;
   }
   .header-cta {
-    align-self: center;
+    margin-top: 0;
   }
 }
 
 /* Hero */
 .heroTitle {
-  margin: 28px 0 10px;
   font-size: 44px;
-  line-height: 1.05;
-  letter-spacing: -0.6px;
+  line-height: 1.08;
+  margin: 34px 0 14px;
+  font-weight: 800;
 }
 
 .heroDesc {
-  margin: 0;
+  color: #cfcfcf;
+  margin: 0 0 22px;
   max-width: 720px;
-  color: var(--muted);
-  font-size: 14px;
   line-height: 1.6;
 }
 
-/* CTA Row */
+/* CTA row */
 .ctaRow {
   display: flex;
   gap: 12px;
-  align-items: center;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin: 10px 0 16px;
 }
 
-/* Primary CTA */
 a.cta {
-  background: linear-gradient(135deg, var(--gold), #f5d27a);
+  background: linear-gradient(135deg, #c9a24d, #f5d27a);
   color: #000;
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: 14px;
   font-weight: 800;
+  text-decoration: none;
   display: inline-block;
-  transition: transform 0.15s ease;
 }
 
-a.cta:hover {
-  transform: translateY(-1px);
-}
-
-/* Secondary CTA */
 a.ctaSecondary {
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: #fff;
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: 14px;
   font-weight: 700;
+  text-decoration: none;
   display: inline-block;
 }
+a.ctaSecondary:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
 
-/* Trust List */
+/* Trust list */
 .trustList {
-  margin: 18px 0 0;
+  margin: 14px 0 28px;
   padding-left: 18px;
-  color: #e7e7e7;
-  font-size: 13px;
-  line-height: 1.6;
+  color: #eaeaea;
+}
+.trustList li {
+  margin: 6px 0;
 }
 
 /* Card */
 .card {
-  margin-top: 22px;
-  background: var(--card);
+  background: #151515;
   border-radius: 18px;
   padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  margin-top: 26px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .card h3 {
-  margin: 0 0 8px;
-  font-size: 16px;
+  margin: 0 0 6px;
 }
 
 .card p {
-  margin: 0 0 16px;
-  color: #d7d7d7;
-  font-size: 13px;
+  color: #e2e2e2;
   line-height: 1.6;
 }
 
-/* Card Grid */
 .cardGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (min-width: 760px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .cardItem {
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 12px;
   padding: 12px 12px;
 }
 
 .cardLabel {
-  font-size: 10px;
-  letter-spacing: 1px;
+  font-size: 11px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(201, 162, 77, 0.9);
   margin-bottom: 6px;
 }
 
 .cardValue {
-  font-size: 13px;
   font-weight: 800;
   color: #fff;
 }
 
-@media (min-width: 860px) {
-  .cardGrid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Card buttons */
 .cardActions {
-  margin-top: 14px;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  align-items: center;
+  margin-top: 16px;
 }
 
 .finePrint {
-  margin-top: 12px;
-  font-size: 11px;
+  margin-top: 14px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.55);
 }
 
 /* Footer */
 .footer {
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footerLinks {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
+  color: rgba(201, 162, 77, 0.95);
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.75);
 }
 
 .footerLinks a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: rgba(201, 162, 77, 0.95);
+  text-decoration: none;
 }
-
-.brand {
-  color: var(--gold);
-  font-weight: 800;
+.footerLinks a:hover {
+  text-decoration: underline;
 }
 
 .disclaimer {
-  margin: 10px 0 0;
-  font-size: 11px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.55);
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.5;
+  max-width: 900px;
 }
 
-copyright {
-  margin: 8px 0 0;
-  font-size: 11px;
+.copyright {
+  margin-top: 10px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
 }
